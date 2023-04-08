@@ -1,13 +1,13 @@
 import Head from "next/head";
 import type { NextPage } from "next";
-import { ContractData } from "~~/components/example-ui/ContractData";
-import { ContractInteraction } from "~~/components/example-ui/ContractInteraction";
+import { ContractData } from "~~/components/infused-token/ContractData";
+import { ContractInteraction } from "~~/components/infused-token/ContractInteraction";
 
-const ExampleUI: NextPage = () => {
+const InfusedToken: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Scaffold-eth Example Ui</title>
+        <title>Infused token</title>
         <meta name="description" content="Created with 🏗 scaffold-eth" />
         {/* We are importing the font this way to lighten the size of SE2. */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -21,4 +21,4 @@ const ExampleUI: NextPage = () => {
   );
 };
 
-export default ExampleUI;
+export default InfusedToken;
