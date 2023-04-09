@@ -10,6 +10,7 @@ import {
 import { configureChains } from "wagmi";
 import * as chains from "wagmi/chains";
 import { alchemyProvider } from "wagmi/providers/alchemy";
+import { infuraProvider } from "wagmi/providers/infura";
 import { publicProvider } from "wagmi/providers/public";
 import scaffoldConfig from "~~/scaffold.config";
 import { burnerWalletConfig } from "~~/services/web3/wagmi-burner/burnerWalletConfig";
@@ -28,9 +29,13 @@ const enabledChains =
 export const appChains = configureChains(
   enabledChains,
   [
+    infuraProvider({
+      apiKey: scaffoldConfig.infuraApiKey,
+      priority: 0,
+    }),
     alchemyProvider({
       apiKey: scaffoldConfig.alchemyApiKey,
-      priority: 0,
+      priority: 1,
     }),
     publicProvider({ priority: 1 }),
   ],

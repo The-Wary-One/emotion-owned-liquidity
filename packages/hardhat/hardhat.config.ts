@@ -36,7 +36,7 @@ const config: HardhatUserConfig = {
       accounts: [deployerPrivateKey],
     },
     sepolia: {
-      url: `https://eth-sepolia.g.alchemy.com/v2/${providerApiKey}`,
+      url: process.env.API_KEY,
       accounts: [deployerPrivateKey],
     },
     goerli: {
